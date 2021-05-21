@@ -58,7 +58,9 @@ router.post("/register", async (req, res) => {
   
 
 //Login
-
+router.get('/login',(req,res)=>{
+  res.render('companySignIn.ejs');
+})//for sending login page as response
 router.post("/login", async (req, res) => {
   // Let's validate the date before move further
   //const validation = registerValidation(req.body);

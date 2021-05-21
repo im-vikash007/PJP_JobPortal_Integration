@@ -28,14 +28,14 @@ function validateform(form) {
 	var email_form = document.getElementById("email_id").value;
 	//var user_form = document.getElementById("user_id").value;
 
-	if (pass_form == psw && email_form == eid ) {
-		setTimeout(function () { window.location = "./UserDetailsViewAdmin.html" });
-	}
-	else {
-		document.getElementById("login_val").innerHTML = "Error : Enter correct Credentials";
-		document.getElementById("SignUP_form").reset();
-		return false;
-	}
+	// if (pass_form == psw && email_form == eid ) {
+	// 	setTimeout(function () { window.location = "./UserDetailsViewAdmin.html" });
+	// }
+	// else {
+	// 	document.getElementById("login_val").innerHTML = "Error : Enter correct Credentials";
+	// 	document.getElementById("SignUP_form").reset();
+	// 	return false;
+	// }
 
 
 
@@ -64,24 +64,24 @@ document.addEventListener("DOMContentLoaded", function () {
 		var pwd1Input = document.getElementById("myPwd1");
 		pwd1Input.setCustomValidity(pwd1Input.title);
 
-		var pwd2Input = document.getElementById("myPwd2");
+	//	var pwd2Input = document.getElementById("myPwd2");
 
-		pwd1Input.addEventListener("keyup", function (e) {
-			this.setCustomValidity(this.validity.patternMismatch ? pwd1Input.title : "");
-			if (this.checkValidity()) {
-				pwd2Input.pattern = RegExp.escape(this.value);
-				pwd2Input.setCustomValidity(pwd2Input.title);
-			} else {
-				pwd2Input.pattern = this.pattern;
-				pwd2Input.setCustomValidity("");
-			}
-		}, false);
+	// 	pwd1Input.addEventListener("keyup", function (e) {
+	// 		this.setCustomValidity(this.validity.patternMismatch ? pwd1Input.title : "");
+	// 		if (this.checkValidity()) {
+	// 			pwd2Input.pattern = RegExp.escape(this.value);
+	// 			pwd2Input.setCustomValidity(pwd2Input.title);
+	// 		} else {
+	// 			pwd2Input.pattern = this.pattern;
+	// 			pwd2Input.setCustomValidity("");
+	// 		}
+	// 	}, false);
 
-		pwd2Input.addEventListener("keyup", function (e) {
-			this.setCustomValidity(this.validity.patternMismatch ? pwd2Input.title : "");
-		}, false);
+	// 	pwd2Input.addEventListener("keyup", function (e) {
+	// 		this.setCustomValidity(this.validity.patternMismatch ? pwd2Input.title : "");
+	// 	}, false);
 
-	}
+	 }
 
 }, false);
 

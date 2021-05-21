@@ -5,12 +5,13 @@ const dotenv = require("dotenv");
 var cookies = require("cookie-parser");
 var bodyParser = require('body-parser');
 const path=require('path');
-app.use('/public',express.static('public'));
+// app.use('/public',express.static('public'));
 app.use('/public',express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
 app.use(cookies());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//app.use("/public",express.static(__dirname + 'public')); //Serves resources from public folder
 dotenv.config();
 //import Routes
 /*
@@ -60,8 +61,12 @@ app.use("/api/update", updateRoute);
 
 app.use("/api/user",userRoute);
 app.use("/api/company",companyRoute);
-
-
+app.get('/',(req,res)=>{
+  res.render('index.ejs');
+});
+// app.get('/companySignin',(req,res)=>{
+//   res.render('companySignIn.ejs');
+// })
 app.listen(3001, (req, res) => {
   console.log("server up and running on port 3001");
 });

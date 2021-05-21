@@ -1,0 +1,225 @@
+:root{
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+
+@media (min-width:992px){
+
+  .sidebar-nav{
+      transform:none;
+      visibility:visible !important;
+      top:var(--topNavbarHeight);
+      height:calc(100% - var(--topNavbarHeight));
+  }
+
+  .btn-close{
+      display: none !important;
+  }
+
+  main{
+      margin-left: var(--offcanvas-width);
+  }
+}
+
+.navbar{
+  background-color: rgb(1, 47, 73) !important;
+}
+
+.nav-item a{
+  color: #fff !important;
+}
+.navbar-brand{
+  color: #fff !important;
+}
+
+.navbar-nav{
+  width: 100% !important;
+  display: flex !important;
+  justify-content:flex-end !important;
+  align-items: center !important;
+}
+
+.offcanvas{
+  background-color: rgb(1, 47, 73) !important;
+}
+
+.offcanvas h5{
+  color: #fff !important;
+}
+
+.offcanvas a{
+  color:#fff !important;
+  text-decoration: none !important;
+}
+
+.offcanvas-body{
+  color:#fff !important;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(1, 47, 73);
+  color: rgb(1, 47, 73);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-item a:hover {
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #0f4869;
+  color: #fff !important;
+}
+.navbar-brand:hover {
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #0f4869;
+  color: #fff !important;
+}
+
+.offcanvas a:hover {
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #0f4869;
+  color: #fff !important;
+}
+
+.bg-info {
+  padding: 3em;
+  border: solid rgb(1, 47, 73);
+  background-color: #fff !important;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px #838383 !important;
+  width: 90%;
+}
+
+.container{
+  width: 80%;
+  margin-top: 5%;
+}
+
+.card-header{
+  color: rgb(1, 47, 73);
+  text-align: center;
+  background-color: #fff;
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.display-6{
+  font-size: x-large;
+font-weight: 470;
+}
+
+.btn-primary:hover{
+  background-color: #06d6a0;
+  border-color: #06d6a0;
+}
+
+#table-sortable .th-sort-asc::after {
+content: "\25b4";
+}
+
+#table-sortable .th-sort-desc::after {
+content: "\25be";
+}
+
+#table-sortable .th-sort-asc::after, .table-sortable .th-sort-desc::after {
+margin-left: 5px;
+}
+
+th{
+color: #495057;
+}
+
+#select2, #myInput{
+border-color: black;
+}
+
+@media (max-width: 810px){
+  .container{
+    width: 100%;
+    margin-top: 20%;
+  }
+  .bg-info {
+    padding: 0;
+    border: solid rgb(1, 47, 73);
+    background-color: #fff !important;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px #838383 !important;
+    width: 100%;
+    
+  }
+  
+  .display-6{
+    font-size: large;
+      font-weight: 470;
+  }
+}
+
+@media (max-width: 460px){
+  .btn-success, .btn-danger{
+    margin-top: 1%;
+ }
+}
+
+@media (max-width: 406px){
+  .container{
+    width: 100%;
+    margin-top: 40%;
+  }
+  .bg-info {
+    padding: 0;
+    border: solid rgb(1, 47, 73);
+    background-color: #fff !important;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px #838383 !important;
+    width: 100%;
+  }
+  
+
+  .display-6{
+    font-size: large;
+      font-weight: 470;
+  }
+
+}
+
+@media (max-width: 310px){
+  .container{
+    width: 100%;
+    margin-top: 40%;
+  }
+  .bg-info {
+    padding: 0;
+    border: solid rgb(1, 47, 73);
+    background-color: #fff !important;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px #838383 !important;
+    width: 100%;
+  }
+  
+
+  .card-header{
+    font-size: 1.5em;
+  }
+
+  .display-6{
+    font-size: large;
+      font-weight: 470;
+  }
+
+}

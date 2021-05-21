@@ -68,8 +68,9 @@ router.post("/register",upload.single('profilePic'),async (req, res) => {
    
      //userDetail 
     const userDetail = new UserDetail({
-          firstName: req.body.firstname,
-          lastName:req.body.lastname,
+          email: req.body.email,
+          firstName: req.body.firstName,
+          lastName:req.body.lastName,
           gender: req.body.gender,
           dob: req.body.dob,
           phone: req.body.phone,
@@ -100,6 +101,9 @@ router.post("/register",upload.single('profilePic'),async (req, res) => {
   });
   
 //Login
+router.get('/login',(req,res)=>{
+  res.render('userSignIn.ejs');
+});
 
 router.post("/login", async (req, res) => {
   // Let's validate the date before move further
@@ -121,7 +125,8 @@ router.post("/login", async (req, res) => {
     httpOnly: true,
     maxAge: process.env.TOKEN_AGE * 1000,
   });
-  res.status(200).json({ user: user._id });
+  const userdetail = await UserDetail.findOne({email: req.body.email});
+  res.status(200).json({ user: user._id ,userd:userdetail});
 
   //res.render('page to be rendered after login');
 });

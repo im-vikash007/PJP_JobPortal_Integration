@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./static/bootstrap.css" />
-    <link rel="stylesheet" href="./static/main.css" />
+    <link rel="stylesheet" href="/public/static/bootstrap.css" />
+    <link rel="stylesheet" href="/public/static/main.css" />
     <title>Job Portal | Home</title>
   </head>
 
@@ -23,21 +23,21 @@
             <div class="options">
               <button
                 type="button"
-                onclick="location.href='companySignIN.html'"
+                onclick="location.href='/api/company/login'"
                 class="btn view-as-admin btn-lg shadow p-3 mb-5 rounded mx-auto"
               >
                 View As Admin
               </button>
               <button
                 type="button"
-                onclick="location.href='userSignIn.html'"
+                onclick="location.href='/api/user/login'"
                 class="btn view-as-user btn-lg shadow p-3 mb-5 rounded mx-auto"
               >
                 View As User
               </button>
             </div>
           </div>
-          <img src="./images/6671.jpg" class="img-adjust" alt="..." />
+          <img src="/public/images/6671.jpg" class="img-adjust" alt="..." />
           <div class="blank-div"></div>
         </div>
       </section>

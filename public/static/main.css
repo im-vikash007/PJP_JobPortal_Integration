@@ -1,0 +1,803 @@
+
+
+.bg-light {
+  background-color: rgb(1, 47, 73) !important;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: var(--bs-font-sans-serif);
+}
+.nav-item a{
+  color: #fff !important;
+}
+.navbar-brand{
+  color: #fff !important;
+}
+.navbar-nav{
+  width: 100% !important;
+  display: flex !important;
+  justify-content:flex-end !important;
+  align-items: center !important;
+}
+/* .navbar-toggler-icon{
+  color: #fff !important;
+} */
+.custom-toggler.navbar-toggler {
+  border-color: rgb(1, 47, 73);
+  color: rgb(1, 47, 73);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-item a:hover {
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #0f4869;
+  color: #fff !important;
+}
+.navbar-brand:hover {
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #0f4869;
+  color: #fff !important;
+}
+
+.img-adjust {
+  height: 90vh !important;
+  width: 100%;
+  position: absolute;
+}
+
+.blank-div {
+  background-color: rgb(15, 72, 105);
+  opacity: 0.65;
+  height: 90vh;
+}
+
+body{
+  height: 100vh;
+}
+
+.page-wrap-index{
+  min-height: 90%; 
+}
+
+.page-wrap-signin{
+  min-height: 90%; 
+}
+
+.page-wrap-signup{
+  min-height: 90%; 
+}
+
+.page-wrap-comapanysignin{
+  min-height: 90%; 
+}
+
+.page-wrap-userdetails-view-admin{
+  min-height: 90%;
+}
+
+.footer-css {
+  height: 10vh;
+  background-color: rgb(1, 47, 73) !important;
+}
+.options {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  left: 40%;
+  font-family:var(--bs-font-sans-serif);
+}
+
+.view-as-admin {
+  background-color: rgb(15, 72, 105);
+  color: white;
+}
+.view-as-admin:hover {
+  background-color: white;
+  color: rgb(1, 47, 73);
+  border: 1px solid rgb(1, 47, 73);
+}
+
+.view-as-user {
+  color: rgb(1, 47, 73);
+  border-color: rgb(1, 47, 73);
+  background-color: white;
+}
+
+.view-as-user:hover {
+  background-color: rgb(15, 72, 105);
+  border: none;
+  color: white;
+}
+
+section {
+  position: relative;
+}
+
+.tagline {
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: 35%;
+}
+
+.btn-outline {
+  color: white;
+  border-color: white;
+}
+
+/* Pratik's */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.nav-bg-color {
+  background-color: #0f4869;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: block;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+  color: rgb(1, 47, 73);
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  padding: 7px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td,
+th {
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  padding: 10px;
+}
+
+/*-- main --*/
+.main-logINlayouts {
+  padding: 3em 0 1em;
+}
+
+.main-agileinfo {
+  width: 35%;
+  background-size: cover;
+  align-items: center;
+}
+
+.agileits-top {
+  padding: 3em;
+  border: solid rgb(1, 47, 73);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px #838383;
+  width: 90%;
+  font-family:  var(--bs-font-sans-serif);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 0.9em;
+  color: #838383;
+  font-weight: 100;
+  width: 94.5%;
+  display: block;
+  border: none;
+  padding: 0.8em;
+  border: 1.4px solid rgb(1, 47, 73);
+  border-radius: 2px;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 96%,
+    #838383 4%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    #838383 4%
+  );
+  background-position: -800px 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #838383;
+}
+#user_val {
+  color: red;
+}
+
+#login_val {
+  color: red;
+}
+input.email,
+input.text.logINlpass {
+  margin: 2em 0;
+}
+
+.text:focus,
+.text:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+.text:focus::-webkit-input-placeholder,
+.text:valid::-webkit-input-placeholder {
+  font-size: 0.9em;
+  -webkit-transform: translateY(-30px);
+  -moz-transform: translateY(-30px);
+  -o-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  visibility: visible !important;
+}
+
+::-webkit-input-placeholder {
+  color: #838383;
+  font-weight: 400;
+}
+
+input[type="submit"] {
+  font-size: 0.9em;
+  color: #fff;
+  background: rgb(1, 47, 73);
+  /*#76b852*/
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.9em;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 2em 0;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+  background: #8dc26f;
+}
+/*Dont Have an Acc*/
+.agileits-top p {
+  font-size: 1em;
+  color: #838383;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+/*Create Acc*/
+.agileits-top p a {
+  color: rgb(1, 47, 73);
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  transition: 0.5s all;
+  font-weight: 500;
+}
+
+.agileits-top p a:hover {
+  color: #76b852;
+}
+
+.main-agileinfo{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#indexh2{
+  color: white;
+  text-align: left;
+  font-size: xx-large;
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 500;
+  letter-spacing: normal;
+}
+/*-- //main --*/
+/*-- checkbox --*/
+/*-- responsive-design --*/
+@media (max-width: 1440px) {
+  input[type="text"],
+  input[type="email"] {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1366px) {
+  h2 {
+    font-size: 2.6em;
+  }
+
+  .agileits-top {
+    padding: 2.5em;
+  }
+
+  .main-agileinfo {
+    margin: 2em auto;
+  }
+
+  .main-agileinfo {
+    width: 36%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .main-agileinfo {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .main-agileinfo {
+    width: 46%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-agileinfo {
+    width: 49%;
+  }
+}
+
+@media (max-width: 991px) {
+  #indexh2{
+    font-size: 2em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  h2 {
+    font-size: 2.4em;
+  }
+
+  .main-logINlayouts {
+    padding: 2em 0 1em;
+  }
+}
+
+@media (max-width: 900px) {
+  #indexh2{
+    font-size: 1.8em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
+  .main-agileinfo {
+    width: 58%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 93%;
+  }
+}
+
+@media (max-width: 800px) {
+  #indexh2{
+    font-size: 1.6em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 736px) {
+  #indexh2{
+    font-size: 1.5em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
+  .main-agileinfo {
+    width: 62%;
+  }
+}
+
+@media (max-width: 667px) {
+  #indexh2{
+    font-size: 1.4em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: medium;
+  }
+  .main-agileinfo {
+    width: 67%;
+  }
+}
+
+@media (max-width: 600px) {
+  #indexh2{
+    font-size: 1.3em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  .agileits-top {
+    padding: 2.2em;
+  }
+
+  input.email,
+  input.text.logINlpass {
+    margin: 1.5em 0;
+  }
+
+  input[type="submit"] {
+    margin: 2em 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 568px) {
+  #indexh2{
+    font-size: 1.2em;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  .main-agileinfo {
+    width: 75%;
+  }
+
+  .colorlibcopy-agile p {
+    padding: 0 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  #indexh2{
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 25%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  h2 {
+    font-size: 1.8em;
+    letter-spacing: 3px;
+  }
+
+  .agileits-top {
+    padding: 1.8em;
+    
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 91%;
+  }
+
+  .agileits-top p {
+    font-size: 0.9em;
+   
+  }
+}
+
+@media (max-width: 414px) {
+  #indexh2{
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 20%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  h2 {
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
+
+  .main-agileinfo {
+    width: 85%;
+    margin: 1.5em auto;
+  }
+
+  .text:focus,
+  .text:valid {
+    background-position: 0 0px;
+  }
+
+  .wthree-text ul li,
+  .wthree-text ul li:nth-child(2) {
+    display: block;
+    float: none;
+  }
+
+  .wthree-text ul li:nth-child(2) {
+    margin-top: 1.5em;
+  }
+
+  input[type="submit"] {
+    margin: 2em 0 1.5em;
+    letter-spacing: 3px;
+  }
+
+  input[type="submit"] {
+    margin: 2em 0 1.5em;
+  }
+
+  .colorlibcopy-agile {
+    margin: 1em 0 1em;
+  }
+}
+
+@media (max-width: 384px) {
+  #indexh2{
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 20%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  .main-agileinfo {
+    width: 88%;
+  }
+
+  .colorlibcopy-agile p {
+    padding: 0 1em;
+  }
+}
+
+@media (max-width: 375px) {
+  #indexh2{
+    font-size: 1em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 20%;
+  }
+  .options {
+    left: 20%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  .agileits-top p {
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 325px) {
+  #indexh2{
+    font-size: 0.95em;
+    text-align: center;
+  }
+  .tagline{
+    text-align: center;
+    left: 10%;
+  }
+  .options {
+    left: 10%;
+  }
+  .view-as-admin, .view-as-user{
+    font-size: small;
+  }
+  .main-logINlayouts {
+    padding: 1.5em 0 0;
+  }
+
+  .agileits-top {
+    padding: 1.2em;
+  }
+
+  .colorlibcopy-agile {
+    margin: 0 0 1em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 89.5%;
+    font-size: 0.85em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+    letter-spacing: 0px;
+  }
+
+  .main-agileinfo {
+    width: 92%;
+    margin: 1em auto;
+  }
+
+  .text:focus,
+  .text:valid {
+    background-position: 0 0px;
+  }
+
+  input[type="submit"] {
+    margin: 1.5em 0;
+    padding: 0.8em;
+    font-size: 0.85em;
+  }
+
+  .colorlibcopy-agile p {
+    font-size: 0.85em;
+  }
+
+  .main-logINlayouts {
+    padding: 1em 0 0;
+  }
+}

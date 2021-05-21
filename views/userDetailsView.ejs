@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <title>User Details</title>
+  </head>
+
+  <body>
+    <div class="page-wrap-userdetails-view-admin">
+      <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Job Portal</a>
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="UserEditAccess.html">Edit Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="userSignIn.html">Log Out</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <section>
+        <div class="container">
+          <br />
+          <br />
+          <div class="container">
+            <h2 style="text-align: center; color: black">Application Detail</h2>
+          </div>
+          <div id="fetch-data" style="text-align: center; margin: 10vh">
+            <div class="container" style="width: 70%; align-items: center">
+              <h3>Personal Details ____________________</h3>
+              <br />
+              <table>
+                <tr>
+                  <td>First Name:</td>
+                  <td><%= user.firstName %></td>
+                </tr>
+                <tr>
+                  <td>Last Name:</td>
+                  <td><%= user.lastName %></td>
+                </tr>
+                <tr>
+                  <td>Gender:</td>
+                  <td><%= user.gender %></td>
+                </tr>
+                <tr>
+                  <td>Date of Birth:</td>
+                  <td><%= user.dob %></td>
+                </tr>
+                <tr>
+                  <td>Email ID:</td>
+                  <td><%= user.email %></td>
+                </tr>
+                <tr>
+                  <td>Phone:</td>
+                  <td><%= user.phone %></td>
+                </tr>
+                <tr>
+                  <td>Years of Experience:</td>
+                  <td><%= user.yoe %></td>
+                </tr>
+              </table>
+              <br />
+
+              <h3>Qualification Details ____________________</h3>
+              <br />
+              <% if(user.qualificationDetails.length > 0) { %> 
+              <% user.qualificationDetails.forEach(qualification => { %>
+              <table>
+                <tr>
+                  <td>Institute Name:</td>
+                  <td><%= qualification.instituteName %></td>
+                </tr>
+                <tr>
+                  <td>Duration:</td>
+                  <td>
+                    <%= qualification.startDate %> - <%= qualification.endDate %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Degree:</td>
+                  <td><%= qualification.degree %></td>
+                </tr>
+                <tr>
+                  <td>Stream:</td>
+                  <td><%= qualification.stream %></td>
+                </tr>
+                <tr>
+                  <td>Percentage:</td>
+                  <td><%= qualification.percentage %></td>
+                </tr>
+              </table>
+              <br />
+              <% }) %> 
+              <% } else { %>
+              <h3>No data Available</h3>
+              <% } %>
+
+              <h3>Skills ____________________</h3>
+              <br />
+              <table>
+                <tr>
+                  <td>Skills:</td>
+                  <% user.skills.foreach(skill => { %>
+                  <td><%= skill %></td>
+                  <% }) %>
+                </tr>
+              </table>
+              <br />
+
+              <h3>Work Experience ____________________</h3>
+              <br />
+              <% if(user.workExperience.length > 0) { %> 
+              <% user.workExperience.forEach(exp => { %>
+              <table>
+                <tr>
+                  <td>Role:</td>
+                  <td><%= exp.role %></td>
+                </tr>
+                <tr>
+                  <td>Organization:</td>
+                  <td><%= exp.organization %></td>
+                </tr>
+                <tr>
+                  <td>Location:</td>
+                  <td><%= exp.location %></td>
+                </tr>
+                <tr>
+                  <td>Duration:</td>
+                  <td><%= exp.startDate %> - <%= exp.endDate %></td>
+                </tr>
+                <tr>
+                  <td>Description:</td>
+                  <td style="text-align: justify"><%= exp.description %></td>
+                </tr>
+              </table>
+              <br />
+              <% }) %> <% } else { %>
+              <h3>No data Available</h3>
+              <% } %>
+
+              <h3>Project Details ____________________</h3>
+              <br />
+              <% if(user.projectDetails.length > 0) { %>
+              <% user.projectDetails.forEach(project => { %>
+              <table>
+                <tr>
+                  <td>Project Title:</td>
+                  <td><%= project.title %></td>
+                </tr>
+                <tr>
+                  <td>Duration:</td>
+                  <td><%= project.startDate %> - <%= project.endDate %></td>
+                </tr>
+                <tr>
+                  <td>Description:</td>
+                  <td style="text-align: justify">
+                    <%= project.description %>
+                  </td>
+                </tr>
+              </table>
+              <br />
+              <% }) %> <% } else { %>
+              <h3>No data Available</h3>
+              <% } %>
+
+              <h3>Certifications ____________________</h3>
+              <br />
+              <% if(user.certifications.length > 0) { %> <%
+              user.certifications.forEach(certificate => { %>
+              <table>
+                <tr>
+                  <td>Course Nmae:</td>
+                  <td><%= certificate.courseName %></td>
+                </tr>
+                <tr>
+                  <td>Issuing Organization:</td>
+                  <td><%= certificate.issuingOrganization %></td>
+                </tr>
+                <tr>
+                  <td>Issue Date:</td>
+                  <td style="text-align: justify">
+                    <%= certificate.issueDate %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Description:</td>
+                  <td style="text-align: justify">
+                    <%= certificate.description %>
+                  </td>
+                </tr>
+              </table>
+              <br />
+              <% }) %> <% } else { %>
+              <h3>No data Available</h3>
+              <% } %>
+
+              <h3>Awards ____________________</h3>
+              <br />
+              <table>
+                <tr>
+                  <td>Awards:</td>
+                  <td><%= user.awards %></td>
+                </tr>
+              </table>
+              <br />
+              <h3>Others ____________________</h3>
+              <br />
+              <table>
+                <tr>
+                  <td>Relocate:</td>
+                  <td><%= user.others.relocate %></td>
+                </tr>
+                <tr>
+                  <td>Location Preference:</td>
+                  <td><%= user.others.locationPreference %></td>
+                </tr>
+                <tr>
+                  <td>Salary Expectation:</td>
+                  <td style="text-align: justify">
+                    <%= user.others.salaryExpectation %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <%- include('./Partials/footer.ejs') %>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript/UserDetailViewAdmin.js"></script>
+  </body>
+</html>

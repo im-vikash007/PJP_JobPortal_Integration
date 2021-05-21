@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <title>User Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="page-wrap-signin">
+        <%- include('./Partials/nav.ejs') %>
+
+        <!-- main -->
+        <section>
+            <div class="main-SignUPlayouts wrapper">
+                <div class="main-agileinfo">
+                    <div class="agileits-top">
+                        <h2>User SignIn</h2>
+
+                        <form id="SignUP_form" onsubmit="return (validateform())" method="POST" action="/auth/login">
+                            <input class="text email" id="email_id" type="email" name="email" placeholder="Email ID"
+                                required="">
+                            <p id="user_email"></p>
+
+                            <input class="text" id="myPwd1" type="password"
+                                title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
+                                required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1"
+                                placeholder="Password">
+                            <p id="user_pwd1"></p>
+
+                            <p id="login_val"></p>
+                            </p>
+                            <input type="submit" value="SIGN IN">
+                        </form>
+                        <p>Don't have an Account? <a href="UserRegistration.html"> Create One!</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <%- include('./Partials/footer.ejs') %>
+    <!-- //main -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="../public/javascript/userSignIn.js">
+    </script>
+</body>
+
+</html>

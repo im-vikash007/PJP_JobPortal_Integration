@@ -19,8 +19,8 @@
               <h2>Company SignIn</h2>
               <form
                 id="SignUP_form"
-                method="get"
-                onsubmit="return (validateform())"
+                method="POST",
+                action="/api/company/login"
               >
                 <input
                   class="text email"
@@ -36,10 +36,7 @@
                   class="text"
                   id="cPwd1"
                   type="password"
-                  title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
-                  required
-                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                  name="pwd1"
+                  name="password"
                   placeholder="Password"
                 />
                 <p id="user_pwd1"></p>

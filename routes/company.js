@@ -5,7 +5,7 @@ const { registerValidation, loginValidation } = require("../validation.js");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const CompanyCred = require("../model/CompanyCred.js");
-
+const UserDetail = require("../model/UserDetail.js");
 //Validation
 
 //Registration
@@ -81,10 +81,28 @@ router.post("/login", async (req, res) => {
     httpOnly: true,
     maxAge: process.env.TOKEN_AGE * 1000,
   });
-  res.status(200).json({ user: user._id });
+  //res.status(200).json({ user: user._id });
 
   //res.render('view to show after login for company');
+    const usersDetail= await UserDetail.aggregate([{ $project :
+      {
+           email:1,
+           firstName:1,
+           lastName:1,
+           gender:1,
+           dob:1,
+           phone:1,
+           yoe:1,
+           qualificationDetails:1,
+           skills:1,
+           workExperience:1,
+           projectDetails:1,
+           certifications:1,
+           awardsAndAchievement:1,
+           others:1
 
+      }}]);
+    res.status(200).json({usersDetail:usersDetail});
 
 });
 

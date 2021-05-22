@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/" method="GET">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
@@ -34,7 +34,7 @@
                 <a class="nav-link" href="UserEditAccess.html">Edit Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="userSignIn.html">Log Out</a>
+                <a class="nav-link" href="/api/user/login" method="GET">Log Out</a>
             </li>
             </ul>
           </div>
@@ -124,7 +124,7 @@
               <table>
                 <tr>
                   <td>Skills:</td>
-                  <% user.skills.foreach(skill => { %>
+                  <% user.skills.forEach(skill => { %>
                   <td><%= skill %></td>
                   <% }) %>
                 </tr>
@@ -189,8 +189,8 @@
 
               <h3>Certifications ____________________</h3>
               <br />
-              <% if(user.certifications.length > 0) { %> <%
-              user.certifications.forEach(certificate => { %>
+              <% if(user.certifications.length > 0) { %> 
+              <% user.certifications.forEach(certificate => { %>
               <table>
                 <tr>
                   <td>Course Nmae:</td>
@@ -223,7 +223,9 @@
               <table>
                 <tr>
                   <td>Awards:</td>
-                  <td><%= user.awards %></td>
+                  <% user.awardsAndAchievement.forEach(awards => { %>
+                  <td><%= awards %></td>
+                  <% } )%>
                 </tr>
               </table>
               <br />
@@ -251,12 +253,11 @@
       </section>
       <%- include('./Partials/footer.ejs') %>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    <script src="./javascript/UserDetailViewAdmin.js"></script>
+    <script src="/public/javascript/UserDetailViewAdmin.js"></script>
   </body>
 </html>

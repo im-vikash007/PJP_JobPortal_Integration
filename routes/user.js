@@ -125,16 +125,18 @@ router.post("/login", async (req, res) => {
     httpOnly: true,
     maxAge: process.env.TOKEN_AGE * 1000,
   });
+  //res.redirect('/api/user/details');
   const userdetail = await UserDetail.findOne({email: req.body.email});
-  res.status(200).json({ user: user._id ,userd:userdetail});
-
-  //res.render('page to be rendered after login');
+  //res.status(200).json({ user: user._id ,userd:userdetail});
+  res.render('userDetailsView.ejs',{user:userdetail});
 });
-
+//user detail page rendering
+//router.get('/')
 //logout
 router.get("/logout", (req, res) => {
   res.cookie("jwt", "", { maxAge: 1 });
-  res.send("logout successfully");
+  //res.send("logout successfully");
+  res.render('index.ejs');
 });
 
 
